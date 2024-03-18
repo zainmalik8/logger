@@ -16,23 +16,6 @@ class BaseLogger(logging.getLogger(__name__).__class__):
         stream.setFormatter(ColoredFormatter(self.LOGGER_FORMAT))
 
         self.addHandler(stream)
-        self.setLevel(level)
-
-    def addHandler(self, hdlr=None):
-        """
-        Not used anymore
-        :param hdlr:
-        :return:
-        """
-        return super().addHandler(hdlr)
-
-    def setLevel(self, level):
-        """
-        not used anymore
-        :param level:
-        :return:
-        """
-        return super().setLevel(level)
 
 
 logger = BaseLogger(__name__)
